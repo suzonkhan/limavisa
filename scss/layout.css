@@ -55,9 +55,14 @@ body.homepage {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.main-header-header {
+.main-header-inner {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  .main-header-inner .logo {
+    max-width: 170px;
+  }
 }
 
 @keyframes textMoveAndReturn {
@@ -165,12 +170,6 @@ body.homepage {
   flex: 0 0 50%;
   max-width: 50%;
 }
-@media screen and (max-width: 800px) {
-  .main-banner > div {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
 
 .main-banner-message {
   text-align: center;
@@ -179,7 +178,8 @@ body.homepage {
   font-size: 3rem;
   border-bottom: solid 4px black;
   padding-bottom: 1.6rem;
-  margin: 2rem 0;
+  margin: 2rem auto;
+  display: table;
 }
 .main-banner-message ul {
   margin: 0;
@@ -198,6 +198,14 @@ body.homepage {
     font-size: 2.875rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .main-banner-message h2 {
+    font-size: 1.2rem;
+  }
+  .main-banner-message ul li {
+    font-size: 1rem;
+  }
+}
 
 .service-block {
   padding: 80px 0;
@@ -205,7 +213,7 @@ body.homepage {
 
 .service-wrapper {
   display: grid;
-  gap: 10px;
+  gap: 20px;
 }
 @media screen and (min-width: 1100px) {
   .service-wrapper {
@@ -250,6 +258,12 @@ body.homepage {
     border-radius: 40px;
     padding: 30px;
     max-width: 380px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .service-card {
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
 
@@ -484,10 +498,6 @@ aside.mobile-menu .mobile-menu-main ul li:hover > a .plusicon {
   transform: rotate(-45deg);
   transition: 0.2s;
 }
-aside.mobile-menu .mobile-menu-main ul li:hover ul {
-  display: block;
-}
-
 .sticky-social {
   display: block;
   position: fixed;
