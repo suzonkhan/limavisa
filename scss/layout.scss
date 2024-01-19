@@ -431,47 +431,50 @@ body.homepage {
 }
 
 .footer-social-media {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
 
-    li {
-      display: inline-block;
-      margin: 5px;
+}
 
-      a {
-        transition: 0.2s;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 4px;
-        //background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+ul.footer-social-block {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 
-        &.facebook {
-          background-image: url("../img/facebook-regular.png");
+  li {
+    display: inline-block;
 
-          &:hover {
-            background-image: url("../img/facebook.png");
-          }
-        }
+    a {
+      transition: 0.2s;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      //background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
 
-        &.line {
-          background-image: url("../img/line-regular.png");
-
-          &:hover {
-            background-image: url("../img/line.png");
-          }
-        }
+      &.facebook {
+        background-image: url("../img/facebook-regular.png");
 
         &:hover {
-          //opacity: 0.1;
-          background-color: #000;
+          background-image: url("../img/facebook.png");
         }
+      }
+
+      &.line {
+        background-image: url("../img/line-regular.png");
+
+        &:hover {
+          background-image: url("../img/line.png");
+        }
+      }
+
+      &:hover {
+        //opacity: 0.1;
+        background-color: #000;
       }
     }
   }
@@ -544,6 +547,28 @@ aside.mobile-menu {
             display: block;
           }
         }
+      }
+    }
+  }
+}
+
+.sticky-social {
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  ul {
+    flex-direction: column;
+    padding: 10px;
+
+    li {
+
+      a {
+        background-color: #fff;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
       }
     }
   }

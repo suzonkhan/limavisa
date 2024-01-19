@@ -392,16 +392,17 @@ body.homepage {
   align-self: center;
 }
 
-.footer-social-media ul {
+ul.footer-social-block {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  gap: 20px;
 }
-.footer-social-media ul li {
+ul.footer-social-block li {
   display: inline-block;
-  margin: 5px;
 }
-.footer-social-media ul li a {
+ul.footer-social-block li a {
   transition: 0.2s;
   width: 40px;
   height: 40px;
@@ -412,19 +413,19 @@ body.homepage {
   background-position: center;
   background-repeat: no-repeat;
 }
-.footer-social-media ul li a.facebook {
+ul.footer-social-block li a.facebook {
   background-image: url("../img/facebook-regular.png");
 }
-.footer-social-media ul li a.facebook:hover {
+ul.footer-social-block li a.facebook:hover {
   background-image: url("../img/facebook.png");
 }
-.footer-social-media ul li a.line {
+ul.footer-social-block li a.line {
   background-image: url("../img/line-regular.png");
 }
-.footer-social-media ul li a.line:hover {
+ul.footer-social-block li a.line:hover {
   background-image: url("../img/line.png");
 }
-.footer-social-media ul li a:hover {
+ul.footer-social-block li a:hover {
   background-color: #000;
 }
 
@@ -485,6 +486,23 @@ aside.mobile-menu .mobile-menu-main ul li:hover > a .plusicon {
 }
 aside.mobile-menu .mobile-menu-main ul li:hover ul {
   display: block;
+}
+
+.sticky-social {
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sticky-social ul {
+  flex-direction: column;
+  padding: 10px;
+}
+.sticky-social ul li a {
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=layout.css.map */
