@@ -1,0 +1,656 @@
+/*横式*/
+@media screen and (min-width: 670px) and (max-width: 1024px) {	
+    .mobilemenubox {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: transparent; 
+    transition: background-color 0.3s; 
+    padding-left: 6em;
+}
+.mobilemenubox.scrolled {
+    background:rgba(0, 0, 0, 0.5);
+    width:100%;
+}
+.logo {
+    display:none;
+}
+.mobilelogo {
+    display:block;
+    width:90%;
+    height:auto;
+    margin-top: 0.9em;
+    align-items: center;
+    
+}
+.mobilelogo img {
+    width:90%;
+    height:auto;
+    z-index: 3;
+    
+}
+.openbtn {
+  font-size: 30px;
+    height:auto;
+    display:block;
+}
+    .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 40px;
+    display:block;
+    padding-bottom: 50px; 
+    
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 42px; 
+    text-decoration: none;
+    font-size: 17px;
+    color: #ffffff;
+    display: block;
+    transition: 0.9s;
+    border-bottom: solid 1px white; 
+    margin-left: 1em; 
+    text-align: left; 
+    padding-left: 3px;
+    padding-right: 10px;
+    width:60%;
+    top: 20px;
+    margin:0;
+    margin-top: 10px;
+    margin-left: 22px;
+    
+}
+
+
+
+.sidenav a:hover, .submenu-content1 a:hover {
+    color: #f1f1f1; 
+    background-color: #333; 
+}
+
+/* 子菜单容器样式 */
+.submenu-content1 {
+    display: none;
+    background-color: #000000;
+    padding-left: 0; 
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    top: 0;
+    margin:0;
+    font-size: 30px;
+    height:auto;
+    border-bottom: none; 
+    padding:0;
+
+    margin-top: -3px;
+  margin-right:10px;
+
+}
+
+#openbtn {
+    font-size: 25px; 
+    cursor: pointer;
+    position: fixed;
+    top: 1.1em; 
+    right: -2em; 
+    z-index: 2;
+    display:block;
+    color:rgb(255, 255, 255);
+    font-weight:500;
+    margin-right:8em;
+    margin-top:0.1em;
+}
+
+.sidenav-footer {
+    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white; 
+    padding: 10px;
+    font-size: 14px; 
+    padding:0;
+    line-height:1.3em;
+    letter-spacing: 0.1rem;
+}
+
+/* 折疊面板的基本樣式 */
+.accordion-itemvisa {
+margin-bottom: 10px; 
+}
+.accordion-titlevisa {
+padding: 10px 8px 8px 22px;
+margin-bottom: 15px; 
+font-size:17px;
+border-bottom: solid 1px white;
+font-family: 'Noto Sans TC', sans-serif;
+line-height:2.3em;
+width: 52%;
+height:30%;
+padding-bottom:20px;
+margin:0;
+padding:0;
+flex-grow: 1;
+padding-top: 0.3em;
+
+}
+.accordion-titlevisa .plusicon {
+margin-left: 10px;
+padding:0;
+color:white;
+padding-top: 1em;
+}
+
+.plusicon {
+	padding-left: 1.2em;
+	margin-right: 1em;
+}
+.submenu-toggle {
+display: flex; 
+justify-content: space-between; 
+align-items: center; 
+  padding-left: 24px;
+padding-right: 26px;
+background-color: #111; 
+color: white; 
+border: none;
+outline: none;
+cursor: pointer;
+transition: background-color 0.3s;
+text-align: left; 
+width: 100%; 
+margin-top: 10px;
+}
+
+
+.submenu-toggle:hover {
+background-color: #333; 
+}
+
+.sidenav .submenu-content1 {
+display: none; 
+background-color: #000000; 
+padding-left: 0; 
+}
+
+.sidenav .submenu-content1 a{
+font-size: 16px;
+}
+.submenu-content a {
+display: block;
+color: black;
+padding: 5px 0;
+text-decoration: none;
+
+}
+
+.sidenav a:hover, .submenu-content1 a:hover {
+color: #f1f1f1; 
+background-color: #333;
+}
+.sidenavlogo {
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+}
+.sidenavlogo img{
+width:70%;
+margin-left: 20px;
+margin-bottom:10px;
+}
+.logo {
+left:20px;
+z-index: 1;
+}	
+.logo img {
+width:8em;
+height:auto;
+margin:0;
+margin-left:1.1em;
+margin-top:0.5em;
+}
+
+.sidenav .social-icons-container a {
+border-bottom: none;
+border:none;
+padding:0;
+margin:0;
+}
+
+.sidenav a img {
+width: 30px;
+height: auto;
+margin: 10px 0; 
+z-index: 3;
+margin-bottom: 20px;
+
+}
+
+.social-icons-container{
+display: flex;
+align-items: center;
+justify-content: space-between; 
+padding: 10px 0; 
+border-bottom: none;
+margin-top: 20px;
+}
+
+.sidenav-line {
+
+margin: 0 10px; 
+}
+
+.social-icon1 {
+border-bottom: none;
+padding-left: 23px;
+}
+.social-icon2 {
+padding-right:6em;
+}
+.social-icon1 a {
+border-bottom: none;
+}
+.menu-box {
+display:none;
+}
+
+.lottie-container {
+    margin-top: 4em;
+    width:100%;
+    margin-right:50px;
+}
+
+.lottie-left-adjust {
+    width: 60vw !important;
+    height: 60vw !important;
+    margin-right: 0;
+}
+
+.lottie-text {
+    margin: 0 10px 0 0;
+    margin-left: -60px;
+      padding-right:40px;
+    margin-bottom: 30px;
+        
+}
+
+.lottie-text h2 {
+    font-size: 28px;
+   text-align: center;
+   display: inline-block;
+   width: 80%; 
+   padding-bottom: 0.5rem;
+   border-bottom: solid 2px black ;
+   font-weight: 800;
+  
+}
+
+.lottie-text p {
+    font-size: 24px;
+    text-align: center;
+    padding-top: 0.9rem;
+    margin-right:0.6em
+    
+    
+
+}
+
+/* 中間三個boxy */
+.header {
+    margin: auto;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+.content {
+    box-sizing: border-box;
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.content h3 {
+    padding-bottom: 0;
+    font-size: 18px;
+}
+
+.content h2 {
+    font-size: 1px;
+}
+.header-with-svg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.svg-icon-special{
+    width:60%;
+    height:auto;
+}
+.svg-icon {
+    margin: 0 0 0 10px;
+    width:20%;
+    height:auto;
+}
+
+.content h2 {
+    padding-bottom: 10px;
+    font-size: 26px;
+    margin: 10px auto;
+}
+
+.content p {
+    margin: 10px auto;
+}
+
+.part2 {
+    width: 90vw;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: 20px;
+    margin: 50px auto;
+    gap: 0;
+}
+
+.part2-left {
+    width: 100%;
+    text-align: center;
+}
+
+.part2-left h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+.part2-left p{
+    margin: 5px auto;
+}
+
+.part2-right {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+}
+
+.step {
+    align-items: center;
+    flex: auto;
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.detail {
+    margin-top: 10px;
+}
+
+/* faq */
+
+.container {
+    width: 80%;
+    margin: 0 auto; 
+  
+    margin-bottom:60px;
+}
+  
+
+.accordion-item {
+    border-bottom: 1px solid #ccc;
+    
+}
+.accordion-title{
+    width:100%;
+    margin-left: 2em;   
+    color:black
+} 
+.accordion-item button {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 25px;
+    margin:0;
+    padding-left: 23px;
+}
+  
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+   margin-right: 300px;
+width:60%;
+}
+  
+[aria-expanded="true"] + .accordion-content {
+    max-height: 100px; 
+}
+  
+[aria-expanded="true"] .icon {
+    content: '-'; 
+}
+.icon {
+    font-size: 25px;
+  
+}
+.accordion-title {
+    font-size: 21px;
+    margin: auto;
+    font-weight: 700;
+    color:black;
+}
+.accordion-content p {
+       font-size: 18px;
+       margin:0;
+       margin-left:1em;
+}
+
+.accordion-title,
+.icon {
+    vertical-align: middle;
+    display: inline-block;
+    color:black;
+}
+footer{
+    width: 100%;
+}
+.footer-logo {
+    margin-right:17em;
+    padding:10px;
+    margin-top: 0.2em;
+}
+.footer-logo img{
+    width:70%;
+}
+.footer-content{
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    
+}
+.footer-info{
+    padding: 0;
+}
+.footer-bottom-text {
+    padding-left:10px;
+    padding-right:10px;
+    font-size:12px;
+    
+}
+.footer-section {
+    font-size:14px;
+}
+
+
+@media screen and (max-width : 450px) {
+.footer-social {
+    margin:auto;
+}
+.footer-social img {
+    width:4%
+}
+.marquee-content{
+    font-size: 12px;
+}
+
+}
+
+}
+@media screen and (min-width: 666px) and (max-width: 667px) {
+   .mobilelogo img{
+    width:85%;
+    height:auto;
+   }
+    .part2 {
+        padding-left: 2em;
+        padding-right:2em;
+    }
+    .lottie-text {
+    margin: 0 10px 0 0;
+    margin-left: -60px;
+      padding-right:20px;
+    margin-bottom: 30px;
+        
+}
+
+.lottie-text h2 {
+    font-size: 32px;
+   text-align: center;
+   display: inline-block;
+   width: 70%;
+   padding-bottom: 0.5rem;
+   border-bottom: solid 2px black ;
+   font-weight: 900;
+  
+}
+
+.lottie-text p {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 0.9rem;
+    margin-right:2em
+    
+    
+
+}
+    .accordion {
+        width:100%
+    }
+    .accordion-content {
+        margin:0;
+        width:100%
+    }
+    .accordion-content p {
+        font-size: 18px;
+        margin:0;
+        text-align:center;
+       width:100%;
+       padding-bottom: 1em;
+       align-items: center;
+}
+    .icon{
+        margin:0;
+    }
+    .footer-social {
+        margin-left: 17em;
+    }
+    .footer-logo {
+       float: left;
+        padding:10px;
+        margin-top: 0.2em;
+        margin-right: 17em;
+    }
+    
+}
+
+.mobilelogo {
+    width:25%;
+    height:auto;
+    margin-left:1.5em;
+    margin-bottom:0.5em ;
+}
+
+#openbtn {
+    margin-top: 0.36em;
+}
+
+@media screen and (min-width: 740px) and (max-width: 741px) {
+    .footer-social {
+        margin-left: 18em;
+    }
+}
+
+@media screen and (min-device-width: 360px) and (max-device-width: 740px) and (orientation: landscape) {
+    /* Samsung Galaxy S8+ 橫屏模式的 CSS 規則 */
+    .lottie-text h2 {
+width:90%;
+    }
+.mobilelogo {
+margin-top: 1em;
+    }
+    .menu {
+        width:60%;
+        margin:auto;
+    }
+}
+@media only screen  and (min-device-width: 375px) 
+and (max-device-width: 667px)   and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    /* iPhone SE 橫屏 CSS */
+    .menu {
+        width:100%;
+    }
+    .lottie-text p {
+        padding-left: 3em;
+        font-size: 23px;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 414px)   and (max-device-width: 896px)   and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    /* iPhone XR 橫屏 CSS */
+    .lottie-text h2 {
+       text-align: center;
+ padding-left: 0.8em;
+    }
+    .lottie-text  {
+        justify-content: center;;
+}}

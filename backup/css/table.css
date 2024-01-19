@@ -1,0 +1,39 @@
+ /* 表格 */
+ table {
+   border-collapse: collapse;
+   width: 90%;
+   max-width: 1200px;
+   box-sizing: border-box;
+   /* 減少表格的寬度 */
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 20px;
+   /* 將表格向下移動 */
+   background-color: #d4d4d4;
+ }
+
+ th,
+ td {
+   border: 1px solid #ddd;
+   padding: 13px;
+   text-align: left;
+   font-size: 20px;
+ }
+
+ th {
+   background-color: #f2f2f2;
+ }
+
+ tr:nth-child(even) {
+   background-color: #f2f2f2;
+ }
+
+ tr:hover {
+   background-color: #ddd;
+ }
+ /* 移动端样式 */
+ @media screen and (max-width : 768px) {
+  th, td{
+    font-size: 14px;
+  }
+ }

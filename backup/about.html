@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>力馬簽證網</title>
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/about2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhcndLo8jxCbEotseTrMeQ4vfKP1xuf08&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
+   
+</head>
+<body>
+    <div id="sidenav" class="sidenav">
+        <div class="sidenavlogo">
+       <img src="img/lima logo3.png" alt="力馬旅遊 Logo">
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   </div>
+     <a href="index.html">首頁 main page</a>
+ 
+     <!-- 其他菜单项 -->
+ 
+     <div class="accordion-itemvisa">
+         <button class="submenu-toggle" aria-expanded="false">
+             <span class="accordion-titlevisa">台胞卡 China visa</span>
+             <span class="icon">+</span>
+         </button>
+         <div class="submenu-content1" style="display: none;">
+             <a href="chinavisanormal.html">一般件 </a>
+             <a href="chinavisalost.html">遺失件</a>
+             <a href="chinavisaphoto.html">照片說明</a>
+         </div>
+     </div>
+     <a href="about.html">聯絡我們 contact</a>
+     
+     <div class="social-icons-container">
+       <a href="https://www.facebook.com/yourpage" target="_blank">
+           <img src="img/facebook.png" alt="Facebook" class="social-icon1">
+       </a>
+       <a href="https://line.me/yourpage" target="_blank">
+           <img src="img/line.png" alt="Line" class="social-icon2">
+       </a>
+   </div>
+   <hr>
+       <div class="sidenav-footer">
+         力馬國際旅行社版權所有 &copy; <br>
+         2023 力馬國際旅行社旅遊網站
+     </div>
+ </div>
+ 
+ </div>
+ 
+ 
+ <div class="mobilemenubox">
+   <div class="mobilelogo">
+    <img src="img/limalogo black.png" alt="力馬旅遊 Logo" class="logo-black">
+    <img src="img/lima logo3.png" alt="力馬旅遊 Logo" class="logo-white" style="display: none;">
+ </div>
+   <span id="openbtn" style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+ </div>
+ </div>
+
+
+    <!-- 藍色的menu box -->
+    <div class="menu-box">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="img/limalogo black.png" alt="Your Logo" class="black-logo">
+        <img src="img/lima logo3.png" alt="Your Logo" class="white-logo" style="display: none;">
+    </div>
+    <ul>
+      <li><a href="index.html">首頁</a></li>
+      <li class="submenu">
+        <a href="chinavisanormal.html">台胞卡 <span class="submenu-symbol"></span></a>
+          <ul>
+              <li><a href="chinavisanormal.html">一般件</a></li>
+              <li><a href="chinavisalost.html">遺失件</a></li>
+              <li><a href="chinavisaphoto.html">照片說明</a></li>
+          </ul>
+      </li>
+      <li><a href="about.html">聯絡我們</a></li>
+  </ul>
+  </div>
+
+  <section class="bg-color-1 header-page-1">
+    <img src="https://framerusercontent.com/images/VFeSop2MbSCxsJXgiS8ja4lfs.png" alt="Background Image">
+    <div class="contact-container">
+        <div class="contact-info2">
+            <h1>聯絡我們</h1>
+            <p>力馬旅遊網站</p>
+            <p>台北簽證中心</p>
+            <p>電話：02-2568-3300</p>
+            <p>地址：台北市忠孝東路一段152號12樓之3</p>
+            <p>營業時間：周一至周五  09:00-18:00</p>
+        </div>
+        <div class="contact-form">
+            <h2>聯絡我們</h2>
+            <form id="contact-form" action="https://formspree.io/f/xvoeonoe" method="POST">
+                <div class="form-group">
+                    <label for="name">姓名：</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">電子郵件：</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">電話：</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">留言：</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">發送</button>
+                <p id="contact-form-status"></p>
+            </form>
+        
+        
+    
+</section>
+
+     <gmp-map center="25.044021606445312,121.5258560180664" zoom="18" map-id="limamap">
+      <gmp-advanced-marker position="25.044021606445312,121.5258560180664" title="lima">
+      </gmp-advanced-marker>
+    </gmp-map>
+  
+  
+<!-- footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="img/limalogo black.png" alt="Your Logo">
+        </div>
+        <div class="footer-info">
+            <div class="footer-section">
+                <h4>Company</h4>
+                <p>力馬國際旅行社</p>
+                <p>甲種旅行社　交觀甲05097</p>
+                <p>品保北1726　統一編號：12973859</p>
+                <p>代表人：陳小青　聯絡人：陳小青</p>
+                <p>地址：台北市忠孝東路一段152號12樓之3
+                <br>善導寺捷運站5號出口(前方200公尺)</p>
+            </div>
+            <div class="footer-section">
+                <h4>Information</h4>
+                <p>客服專線：02-2568-3300</p>
+                <p>傳真：02-2568-3996</p>
+                <p>服務信箱：tommy0988643338</p>
+                <p>服務時間：週一～週五 09:00-18:00</p>
+                <p>週六 10:00-12:30，13:30-17</p>
+            </div>
+        </div>
+        <div class="footer-social">
+            <a href="your_line_account_link_here" target="_blank"><img src="img/82105.png" alt="Line Icon"></a>
+            <a href="https://www.facebook.com/seikotour" target="_blank"><img src="img/225169.png" alt="Facebook Icon"></a>
+        </div>
+    </div>
+    <p class="footer-bottom-text">力馬國際旅行社版權所有 &copy; 2023 力馬國際旅行社旅遊網站</p>
+</footer>
+
+<div class="social-icons">
+    <a href="https://www.facebook.com/seikotour" target="_blank" aria-label="Facebook">
+        <img src="img/225169.png" alt="Facebook">
+    </a>
+    <a href="" target="_blank" aria-label="Line">
+        <img src="img/82105.png" alt="Line">
+    </a>
+  </div>
+<script>
+  window.addEventListener('scroll', function() {
+      var menuBox = document.querySelector('.menu-box');
+      var logo = document.querySelector('.logo');
+      var triggerHeight = 500; 
+      if (window.scrollY > triggerHeight) {
+          menuBox.classList.add('scrolled');
+          logo.classList.add('scrolled-logo'); 
+      } else {
+          menuBox.classList.remove('scrolled');
+          logo.classList.remove('scrolled-logo');
+      }
+  });
+  </script>
+  
+  <script>
+    var form = document.getElementById("contact-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("contact-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "謝謝您的提交!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "哎呀！提交表單時出現問題"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "哎呀！提交表單時出現問題"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+
+<script>
+    const handleSubmit = (event) => {
+        event.preventDefault();
+      
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+      
+        fetch(myForm.getAttribute('action') || "/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        })
+        .then(() => window.location.href = "/thank-you.html") 
+        .catch((error) => alert(error));
+      };
+      
+      document
+        .querySelector("form")
+        .addEventListener("submit", handleSubmit);
+      
+</script>
+
+<script>function openNav() {
+    document.getElementById("sidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("sidenav").style.width = "0";
+  }
+  </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const submenuToggle = document.querySelector('.submenu-toggle');
+        const submenuContent = document.querySelector('.submenu-content1');
+    
+        submenuToggle.addEventListener('click', () => {
+            const isExpanded = submenuToggle.getAttribute('aria-expanded') === 'true';
+            submenuToggle.setAttribute('aria-expanded', !isExpanded);
+            submenuContent.style.display = isExpanded ? 'none' : 'block';
+        });
+    });
+    
+    </script>
+  
+    <script>
+      window.addEventListener('scroll', function() {
+      
+        if (window.innerWidth <= 768) {
+            var mobileMenuBox = document.querySelector('.mobilemenubox');
+            var triggerHeight = 100; 
+            if (window.scrollY > triggerHeight) {
+                mobileMenuBox.classList.add('scrolled');
+            } else {
+                mobileMenuBox.classList.remove('scrolled');
+            }
+        }
+    });
+    
+    </script>
+
+    <script>
+      window.addEventListener('scroll', function() {
+        if (window.innerWidth <= 768) {
+            var mobileMenuBox = document.querySelector('.mobilemenubox');
+            var mobileLogoBlack = document.querySelector('.logo-black');
+            var mobileLogoWhite = document.querySelector('.logo-white');
+            var openBtn = document.getElementById('openbtn');
+    
+            var triggerHeight = 50; 
+            if (window.scrollY > triggerHeight) {
+                mobileMenuBox.classList.add('scrolled');
+                mobileLogoBlack.style.display = 'none';
+                mobileLogoWhite.style.display = 'block';
+                openBtn.style.color = 'white';
+            } else {
+                mobileMenuBox.classList.remove('scrolled');
+                mobileLogoBlack.style.display = 'block';
+                mobileLogoWhite.style.display = 'none';
+                openBtn.style.color = 'black';
+            }
+        }
+    });
+    
+    </script>
+
+</body>
+ 
+</html>
+ 

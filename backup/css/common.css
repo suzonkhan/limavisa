@@ -1,0 +1,621 @@
+@charset "utf-8";
+/* CSS Document */
+@charset "utf-8";
+
+/*!
+ * @名称：common.css
+ * @功能 功能部分的样式 页头导航 和页脚说明
+ */
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* 移动端頭部導航 */
+.mobilemenubox {
+    display: none;
+}
+
+.sidenav {
+    display: none;
+}
+
+/* pc端頭部導航 */
+.menu-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    /* background-color: white; */
+    /* 初始背景色為黑色 */
+    position: sticky;
+    top: 0;
+    transition: background-color 0.3s;
+    /* 平滑過渡效果 */
+    z-index: 1000;
+    /* 確保menu box在最上層 */
+}
+
+/* 滚动时改变链接颜色 */
+.menu-box.scrolled {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    flex-shrink: 0;
+    /* 防止logo在容器縮小時縮小 */
+}
+
+.logo img {
+    height: 50px;
+    /* 根據需要調整 */
+    margin-left: 20px;
+    /* 與菜單項目之間的間距 */
+    margin-top: 10px;
+}
+
+.menu-box .black-logo {
+    display: block;
+}
+
+.menu-box .white-logo {
+    display: none;
+}
+
+.menu-box.scrolled .black-logo {
+    display: none;
+}
+
+.menu-box.scrolled .white-logo {
+    display: block;
+}
+
+.menu-box ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu-box ul li {
+    margin-left: 15px;
+    transition: transform 0.3s;
+    /* 添加变换过渡效果 */
+}
+
+
+.menu-box ul li:hover {
+    transform: translateY(-3px);
+    /* 鼠标悬停时向上移动 */
+}
+
+.menu-box ul li a {
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+    /* 添加过渡效果 */
+}
+
+.menu-box.scrolled ul li a {
+    color: white;
+}
+
+/* 页脚*/
+footer {
+    background-image: linear-gradient(90deg, #f9f9fa 0%, #d4d4d4 100%);
+    padding: 20px 0;
+}
+
+.footer-content {
+    width: 80vw;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    max-width: 220px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-evenly;
+    flex: none;
+    margin: 0 auto;
+}
+
+.footer-section {
+    padding: 0 20px;
+    color: black;
+}
+
+.footer-social {
+    text-align: center;
+}
+
+.footer-social img {
+    width: 40px;
+    padding: 30px;
+}
+
+.footer-bottom-text {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid black;
+    position: relative;
+    padding-top: 1.6rem;
+}
+
+/* 浮动按钮 */
+.social-icons {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.social-icons a {
+    display: block;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons img {
+    width: 30px;
+    height: auto;
+}
+
+/* banner */
+.wowcool {
+	background-image: linear-gradient(
+		rgb(90, 203, 255) 0%,
+		rgb(155, 234, 248) 100%
+	);
+	border-radius: 12px;
+	padding: 3em 5em;
+	max-width: 1200px;
+	width: 90%;
+	max-height: 500px;
+	height: 40vw;
+	box-sizing: border-box;
+	margin: auto;
+	align-items: center;
+	justify-content: space-evenly;
+	display: flex;
+	margin: 20px auto;
+}
+
+.lottie-animation {
+	width: 350px;
+	height: auto;
+	margin-right: 20px;
+}
+
+.text-content {
+	color: white;
+	font-size: 24px;
+}
+
+.text-content h1 {
+	border-bottom: solid 2px white;
+	font-size: 46px;
+	font-weight: bold;
+	padding-bottom: 1.2rem;
+	margin: 0;
+}
+
+.text-content h2 {
+	font-size: 46px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	padding: 0;
+	padding-top: 0.4em;
+	margin: 0;
+}
+
+.text-content p {
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+
+.textcontent {
+	max-width: 1200px;
+	width: 90%;
+	margin: 20px auto;
+	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 30px;
+	color: #000;
+	font-size: 30px;
+	font-weight: 700;
+	background: linear-gradient(95deg, #e7e7e7 0%, #c4c3c3 100%);
+}
+
+.caution {
+	text-align: left;
+	max-width: 1200px;
+	width: 90%;
+	box-sizing: border-box;
+	margin: 20px auto;
+}
+
+/* 移动端样式 */
+@media screen and (max-width : 768px) {
+
+    body {
+        min-width: 375px;
+        margin-top: 55px;
+    }
+
+    .menu-box {
+        display: none;
+    }
+
+    .mobilemenubox {
+        position: fixed;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background: transparent;
+        transition: background-color 0.3s;
+        color: #000;
+    }
+
+    .mobilemenubox.scrolled {
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 5;
+    }
+
+    .mobilelogo {
+        display: block;
+        width: 130px;
+        height: auto;
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+
+    .mobilemenubox.scrolled {
+        color: #fff;
+    }
+
+    .mobilelogo img {
+        width: 100%;
+        height: auto;
+        z-index: 3;
+    }
+
+    .logo-black,
+    .logo-white {
+        width: 30%;
+        height: auto;
+    }
+
+    .logo-black {
+        display: block;
+    }
+
+    .logo-white {
+        display: none;
+    }
+
+    .mobilemenubox.scrolled .logo-black {
+        display: none;
+    }
+
+    .mobilemenubox.scrolled .logo-white {
+        display: block;
+    }
+
+    #openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        position: fixed;
+        /* top: 25px;  */
+        right: 20px;
+        z-index: 2;
+        display: block;
+        font-weight: 500;
+        /* margin-right:10px; */
+    }
+
+    /* 左侧边栏 */
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 40px;
+        display: block;
+        padding-bottom: 50px;
+    }
+
+    .sidenavlogo {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .sidenavlogo img {
+        width: 70%;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 42px;
+        text-decoration: none;
+        font-size: 14px;
+        color: #ffffff;
+        display: block;
+        transition: 0.9s;
+        border-bottom: solid 1px white;
+        margin-left: 1em;
+        text-align: left;
+        padding-left: 3px;
+        padding-right: 10px;
+        width: 60%;
+        top: 20px;
+        margin: 0;
+        margin-top: 10px;
+        margin-left: 22px;
+    }
+
+
+
+    .social-icons-container a {
+        border-bottom: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .social-icons-container a img {
+        width: 30px;
+        height: auto;
+        margin: 10px 0;
+        z-index: 3;
+        margin-bottom: 20px;
+
+    }
+
+    .social-icons-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 0;
+        border-bottom: none;
+        padding-right: 2em;
+        margin-top: 20px;
+    }
+
+    /* 高亮状态 */
+    .sidenav a:hover,
+    .submenu-content1 a:hover {
+        color: #f1f1f1;
+        background-color: #333;
+    }
+
+
+    .submenu-content1 {
+        display: none;
+        background-color: #000000;
+        padding-left: 0;
+    }
+
+    .sidenav .closebtn {
+        top: 0;
+        margin: 0;
+        font-size: 30px;
+        height: auto;
+        border-bottom: none;
+        padding: 0;
+
+        margin-top: -3px;
+        margin-right: 10px;
+
+    }
+
+    /* 折疊面板的基本樣式 */
+    .accordion-itemvisa {
+        margin-bottom: 10px;
+    }
+
+    .submenu-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 24px;
+        padding-right: 26px;
+        background-color: #111;
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-align: left;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .submenu-toggle:hover {
+        background-color: #333;
+    }
+
+    .accordion-titlevisa {
+        padding: 10px 8px 8px 22px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        border-bottom: solid 1px white;
+        font-family: 'Noto Sans TC', sans-serif;
+        line-height: 2.3em;
+        width: 52%;
+        height: 30%;
+        padding-bottom: 20px;
+        margin: 0;
+        padding: 0;
+        flex-grow: 2;
+    }
+
+    .accordion-itemvisa .icon {
+        margin-left: 10px;
+        font-size: 30px;
+    }
+
+    .sidenav .submenu-content {
+        display: none;
+        background-color: #000000;
+        padding-left: 0;
+    }
+
+    .submenu-content a {
+        font-size: 12px;
+        display: block;
+        padding: 5px 0;
+        text-decoration: none;
+    }
+
+    .sidenav-footer {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        color: white;
+        padding: 10px;
+        font-size: 10px;
+        line-height: 1.3em;
+        letter-spacing: 0.1rem;
+    }
+
+    /* 浮动按钮 */
+    .social-icon1 {
+        border-bottom: none;
+        padding-left: 23px;
+    }
+
+    .social-icon2 {
+        padding-right: 10em;
+    }
+
+    .social-icon1 a {
+        border-bottom: none;
+    }
+
+    /* 页脚 */
+    .footer-logo img {
+        width: 160px;
+    }
+
+    .footer-content {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .footer-info {
+        padding: 0;
+    }
+
+    .footer-bottom-text {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 12px;
+        margin: 0 auto;
+    }
+
+    .footer-section {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .footer-social {
+        text-align: center;
+    }
+
+    .footer-social img {
+        width: 30px;
+        padding: 20px;
+    }
+
+    /* banner */
+	.wowcool {
+		background-image: linear-gradient(
+			rgb(90, 203, 255) 0%,
+			rgb(155, 234, 248) 100%
+		);
+		border-radius: 12px;
+		margin: auto;
+		width: 90%;
+		height: 30vw;
+		box-sizing: border-box;
+		padding: 5px 30px;
+	}
+
+	.lottie-animation {
+		max-width: 180px;
+		width: 25vw;
+		height: 23vw;
+	}
+
+	.text-content {
+		font-size: 20px;
+		margin: 0;
+		margin-right: 30px;
+	}
+
+	.text-content h1 {
+		border-bottom: solid 1px white;
+		font-size: 18px;
+		font-weight: 600;
+		margin: 0;
+		padding: 0;
+		padding-bottom: 0.3em;
+	}
+
+	.text-content h2 {
+		font-size: 16px;
+		font-weight: 500;
+		margin-bottom: 20px;
+		margin: 0;
+		padding-top: 0.3em;
+	}
+
+	.text-content p {
+		font-size: 10px;
+		margin-bottom: 1.2em;
+		font-weight: 200;
+	}
+
+	.textcontent {
+		width: 90%;
+		box-sizing: border-box;
+		margin: 20px auto;
+		padding: 10px 20px;
+		font-size: 18px;
+		font-weight: 700;
+	}
+
+	.caution {
+		padding: 20px;
+		font-size: 14px;
+	}
+    
+}

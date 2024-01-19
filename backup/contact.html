@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>力馬旅遊網站</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+      <!-- 頭部導航 -->
+
+    <!-- 藍色的menu box -->
+    <div class="menu-box">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="limalogo black.png" alt="Your Logo" class="black-logo">
+        <img src="lima logo3.png" alt="Your Logo" class="white-logo" style="display: none;">
+    </div>
+      <ul>
+          <li><a href="海峡友誼臺胞網.html">首頁</a></li>
+          <li><a href="paymoney.html">台胞卡</a></li>
+          <li><a href="about.html">關於我們</a></li>
+          <li><a href="contact.html">聯絡我們</a></li>
+      </ul>
+  </div>
+
+    <div class="contact-container">
+        <div class="header-with-svg">
+          <img src="contact-us.svg" alt="SVG Image" class="svg-icon svg-icon-special">
+        </div>
+    </div>
+        <div class="contact-info2">
+        <h1>聯絡我們</h1>
+        <p>力馬旅遊網站</p>
+        <p>台北簽證中心</p>
+        <p>電話：(04) 2326 8838</p>
+        <p>地址：台北市忠孝東路一段152號12樓之3</p>
+        <p>营业时间：周一至周五 (例假日除外) 09:00~12:30/午休/14:00~18:00</p>
+        </div>
+
+        <!-- Google Maps -->
+        <div id="googleMap" style="width:100%;height:100px;"></div>
+    </div>
+         <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhcndLo8jxCbEotseTrMeQ4vfKP1xuf08&callback=console.debug&libraries=maps,marker&v=beta">
+        </script>
+        <link rel="stylesheet" href="./contact.css"/>
+    
+        <gmp-map center="25.044021606445312,121.5258560180664" zoom="14" map-id="DEMO_MAP_ID">
+          <gmp-advanced-marker position="25.044021606445312,121.5258560180664" title="My location">
+          </gmp-advanced-marker>
+        </gmp-map>
+      
+         <!-- fo -->
+        <footer>
+          <div class="footer-content">
+              <div class="footer-logo">
+                  <img src="limalogo black.png" alt="Your Logo">
+              </div>
+              <div class="footer-info">
+                  <div class="footer-section">
+                      <h4>Company</h4>
+                      <p>力馬國際旅行社</p>
+                      <p>甲種旅行社　交觀甲6451</p>
+                      <p>品保北1420　統一編號：12973859</p>
+                      <p>代表人：陳小青　聯絡人：陳小青</p>
+                      <p>地址：台北市忠孝東路一段152號12樓之3</p>
+                  </div>
+                  <div class="footer-section">
+                      <h4>Information</h4>
+                      <p>客服專線：02-2562-4958</p>
+                      <p>傳真：02-2567-5343 / 02-2560-1149</p>
+                      <p>服務信箱：tommy0988643338</p>
+                      <p>服務時間：週一～週五 09:00-18:00</p>
+                      <p>週六 10:00-12:30，13:30-17</p>
+                  </div>
+              </div>
+              <div class="footer-social">
+                  <a href="your_line_account_link_here" target="_blank"><img src="82105.png" alt="Line Icon"></a>
+                  <a href="https://www.facebook.com/seikotour" target="_blank"><img src="225169.png" alt="Facebook Icon"></a>
+              </div>
+          </div>
+          <div class="social-icons">
+            <a href="您的Facebook链接" target="_blank" aria-label="Facebook">
+                <img src="225169.png" alt="Facebook">
+            </a>
+            <a href="您的Line链接" target="_blank" aria-label="Line">
+                <img src="82105.png" alt="Line">
+            </a>
+          </div>
+          <p class="footer-bottom-text">力馬國際旅行社版權所有 &copy; 2023 力馬國際旅行社旅遊網站</p>
+      </footer>
+   
+    
+    <script>
+         
+        window.addEventListener('scroll', function() {
+            var menuBox = document.querySelector('.menu-box');
+            if (window.scrollY > 50) {
+                menuBox.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // 半透明
+                menuBox.classList.add('scrolled');
+            } else {
+                menuBox.style.backgroundColor = 'white'; // 回到白色
+                menuBox.classList.remove('scrolled');
+            }
+        });
+        
+    </script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var menuBox = document.querySelector('.menu-box');
+            var blackLogo = document.querySelector('.black-logo');
+            var whiteLogo = document.querySelector('.white-logo');
+        
+            if (window.scrollY > 50) {
+                menuBox.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // 半透明
+                blackLogo.style.display = 'none';   // 隱藏黑色Logo
+                whiteLogo.style.display = 'block';  // 顯示白色Logo
+            } else {
+                menuBox.style.backgroundColor = 'white'; // 回到白色
+                blackLogo.style.display = 'block';  // 顯示黑色Logo
+                whiteLogo.style.display = 'none';   // 隱藏白色Logo
+            }
+        });
+    </script>
+
+    
+    <script src="lima.js"></script>
+
+    </body>
+
+    </html>
+    
+</body>
+</html>
