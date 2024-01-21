@@ -10,9 +10,9 @@ jQuery(document).ready(function () {
 
     function updateHeader() {
         if (jQuery(window).scrollTop() > headerOffset) {
-            header.addClass('fixed-header');
+            header.addClass('fixed-header header-light');
         } else {
-            header.removeClass('fixed-header');
+            header.removeClass('fixed-header header-light');
         }
     }
 

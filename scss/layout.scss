@@ -1,3 +1,41 @@
+%light-header {
+
+}
+
+@mixin theme($theme: white) {
+
+  .logo {
+    svg {
+      path {
+        fill: $theme;
+      }
+    }
+  }
+  .main-menu {
+    color: $theme;
+
+    & > ul {
+      li {
+        &.submenu {
+          a {
+            &:after {
+              background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M11.9997 14.6769C11.8791 14.6769 11.767 14.6577 11.6631 14.6192C11.5593 14.5807 11.4606 14.5147 11.367 14.4211L6.87276 9.92689C6.73429 9.78844 6.66346 9.6144 6.66026 9.40479C6.65704 9.19519 6.72788 9.01795 6.87276 8.87309C7.01763 8.7282 7.19326 8.65576 7.39966 8.65576C7.60606 8.65576 7.78169 8.7282 7.92656 8.87309L11.9997 12.9462L16.0728 8.87309C16.2112 8.73462 16.3852 8.66379 16.5949 8.66059C16.8045 8.65737 16.9817 8.7282 17.1266 8.87309C17.2714 9.01795 17.3439 9.19359 17.3439 9.39999C17.3439 9.60639 17.2714 9.78202 17.1266 9.92689L12.6323 14.4211C12.5388 14.5147 12.44 14.5807 12.3362 14.6192C12.2324 14.6577 12.1202 14.6769 11.9997 14.6769Z" fill="#{$theme}"/></svg>') no-repeat;
+            }
+          }
+        }
+
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  .mobile-menu-trigger {
+    color: $theme;
+  }
+}
+
 html {
   font-size: 16px;
 }
@@ -52,6 +90,10 @@ img {
 body.homepage {
   background: linear-gradient(rgb(52, 133, 253) 0%, rgb(255, 255, 255) 120vh);
   animation: backgroundStretch 8s ease-in-out infinite;
+
+  .main-header {
+    @include theme;
+  }
 }
 
 .main-header {
@@ -69,29 +111,7 @@ body.homepage {
   }
 
   &.header-light {
-    .main-menu {
-      color: #ffffff;
-
-      & > ul {
-        li {
-          &.submenu {
-            a {
-              &:after {
-                background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M11.9997 14.6769C11.8791 14.6769 11.767 14.6577 11.6631 14.6192C11.5593 14.5807 11.4606 14.5147 11.367 14.4211L6.87276 9.92689C6.73429 9.78844 6.66346 9.6144 6.66026 9.40479C6.65704 9.19519 6.72788 9.01795 6.87276 8.87309C7.01763 8.7282 7.19326 8.65576 7.39966 8.65576C7.60606 8.65576 7.78169 8.7282 7.92656 8.87309L11.9997 12.9462L16.0728 8.87309C16.2112 8.73462 16.3852 8.66379 16.5949 8.66059C16.8045 8.65737 16.9817 8.7282 17.1266 8.87309C17.2714 9.01795 17.3439 9.19359 17.3439 9.39999C17.3439 9.60639 17.2714 9.78202 17.1266 9.92689L12.6323 14.4211C12.5388 14.5147 12.44 14.5807 12.3362 14.6192C12.2324 14.6577 12.1202 14.6769 11.9997 14.6769Z" fill="%23fff"/></svg>') no-repeat;
-              }
-            }
-          }
-
-          a {
-            color: inherit;
-          }
-        }
-      }
-    }
-
-    .mobile-menu-trigger {
-      color: white;
-    }
+    @include theme;
   }
 }
 
@@ -110,6 +130,13 @@ body.homepage {
       }
 
     }
+  }
+}
+
+.logo {
+  svg {
+    max-width: 233px;
+    height: 50px;
   }
 }
 
@@ -227,7 +254,25 @@ body.homepage {
   & > div {
     flex: 0 0 50%;
     max-width: 50%;
+    @media screen and (max-width: 600px) {
+      .lottie-player {
+        transform: scale(1.5);
+      }
+      h2 {
+        padding-bottom: 1rem;
+        margin: 1rem auto;
+      }
+      //&.main-banner-message {
+      //  flex: 0 0 114px;
+      //  max-width: 114px;
+      //}
+      //&.main-banner-animation {
+      //  flex: 0 0 calc(100% - 114px);
+      //  max-width: calc(100% - 114px);
+      //}
+    }
   }
+
 }
 
 .main-banner-message {
@@ -235,10 +280,13 @@ body.homepage {
 
   h2 {
     font-size: 3rem;
-    border-bottom: solid 4px black;
+    border-bottom: solid 2px black;
     padding-bottom: 1.6rem;
     margin: 2rem auto;
     display: table;
+    @media screen and (min-width: 1100px) {
+      border-width: 4px;
+    }
   }
 
   ul {
@@ -638,9 +686,10 @@ aside.mobile-menu {
 .service-page-banner {
   margin: 120px 20px 50px;
   border-radius: 12px;
-  padding: 20px;
+  padding: 20px 0;
   @media screen and (min-width: 1100px) {
     margin: 120px 80px 80px;
+    padding: 20px;
   }
 
   &.china-visa-normal-banner {
@@ -667,14 +716,19 @@ aside.mobile-menu {
   & > div {
     flex: 0 0 50%;
     max-width: 50%;
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (min-width: 1100px) {
+      padding: 20px;
+    }
   }
 
   lottie-player {
     max-width: 600px;
+    @media screen and (max-width: 600px) {
+      transform: scale(1.5);
+    }
   }
 
   .banner-content {
@@ -689,6 +743,11 @@ aside.mobile-menu {
       border-bottom: solid 2px white;
       margin: 0 auto 20px;
       display: table;
+      padding-bottom: 1.6rem;
+      @media screen and (max-width: 600px) {
+        margin: 0 auto 1rem;
+        padding-bottom: 1rem;
+      }
     }
 
     h2 {
@@ -717,10 +776,11 @@ aside.mobile-menu {
       font-size: 24px;
       background: linear-gradient(95deg, #e7e7e7 0%, #c4c3c3 100%);
       padding: 20px;
-      border-radius: 30px;
+      border-radius: 6px;
       text-align: left;
       @media screen and (min-width: 1100px) {
         font-size: 30px;
+        border-radius: 30px;
       }
     }
   }
@@ -737,7 +797,7 @@ table.table-striped {
   th, td {
     border: 1px solid #ddd;
     text-align: left;
-    padding: 6px;
+    padding: 6px 12px;
     font-size: 16px;
     @media screen and (min-width: 1100px) {
       padding: 13px;
@@ -832,42 +892,42 @@ table.table-striped {
   }
 }
 
+.contact-form {
+  button {
+    background: #3b99fd;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #1d8aff;
+    }
+  }
+}
 
 .form-group {
   margin-bottom: 20px;
 
-}
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  color: #666;
-}
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-button {
-  background: #3b99fd;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
 
 }
-
-button:hover {
-  background: #1d8aff;
-}
-
 
 .thank-you-message {
   background-color: #fff;
@@ -910,3 +970,11 @@ button:hover {
   }
 }
 
+gmp-map {
+  height: 400px;
+  width: 100%;
+  margin: 0 auto;
+  @media screen and (min-width: 1100px) {
+    height: 550px;
+  }
+}
