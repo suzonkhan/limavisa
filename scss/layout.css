@@ -557,15 +557,16 @@ aside.mobile-menu .mobile-menu-main ul li a {
   justify-content: space-between;
   gap: 10px;
 }
+aside.mobile-menu .mobile-menu-main ul li.submenu-active > a .plusicon {
+  transform: rotate(-45deg);
+}
 aside.mobile-menu .mobile-menu-main ul .plusicon {
   transition: 0.2s;
 }
 aside.mobile-menu .mobile-menu-main ul ul {
   display: none;
 }
-aside.mobile-menu .mobile-menu-main ul.submenu-active > a .plusicon {
-  transform: rotate(-45deg);
-}
+
 .sticky-social {
   display: block;
   position: fixed;

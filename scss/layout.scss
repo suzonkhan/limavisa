@@ -640,6 +640,18 @@ aside.mobile-menu {
           justify-content: space-between;
           gap: 10px;
         }
+
+        &.submenu-active {
+          & > a {
+            .plusicon {
+              transform: rotate(-45deg);
+            }
+          }
+
+          ul {
+            //display: block;
+          }
+        }
       }
 
       .plusicon {
@@ -648,18 +660,6 @@ aside.mobile-menu {
 
       ul {
         display: none;
-      }
-
-      &.submenu-active {
-        & > a {
-          .plusicon {
-            transform: rotate(-45deg);
-          }
-        }
-
-        ul {
-          //display: block;
-        }
       }
     }
   }
