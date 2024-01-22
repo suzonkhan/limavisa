@@ -27,6 +27,7 @@ jQuery(document).ready(function () {
     })
     jQuery(".mobile-menu .submenu-content a").on('click', function () {
         jQuery(this).siblings("ul").toggle()
+        jQuery(this).parent("li").toggleClass("submenu-active")
     })
     jQuery(".mobile-menu-close-btn").on('click', function () {
         jQuery(".mobile-menu").hide()

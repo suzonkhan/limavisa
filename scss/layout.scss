@@ -100,7 +100,6 @@ body.homepage {
   width: 100%;
   background-color: transparent;
   transition: background-color 0.3s ease;
-  padding: 20px;
   position: fixed;
   top: 0;
   right: 0;
@@ -118,6 +117,9 @@ body.homepage {
 .main-header-inner {
   display: flex;
   justify-content: space-between;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 20px;
 
   .logo {
     a {
@@ -638,22 +640,25 @@ aside.mobile-menu {
           justify-content: space-between;
           gap: 10px;
         }
+      }
 
-        ul {
-          display: none;
+      .plusicon {
+        transition: 0.2s;
+      }
+
+      ul {
+        display: none;
+      }
+
+      &.submenu-active {
+        & > a {
+          .plusicon {
+            transform: rotate(-45deg);
+          }
         }
 
-        &:hover {
-          & > a {
-            .plusicon {
-              transform: rotate(-45deg);
-              transition: 0.2s;
-            }
-          }
-
-          ul {
-            //display: block;
-          }
+        ul {
+          //display: block;
         }
       }
     }

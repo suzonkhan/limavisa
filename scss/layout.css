@@ -71,7 +71,6 @@ body.homepage .main-header .mobile-menu-trigger {
   width: 100%;
   background-color: transparent;
   transition: background-color 0.3s ease;
-  padding: 20px;
   position: fixed;
   top: 0;
   right: 0;
@@ -99,6 +98,9 @@ body.homepage .main-header .mobile-menu-trigger {
 .main-header-inner {
   display: flex;
   justify-content: space-between;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 20px;
 }
 .main-header-inner .logo a {
   display: block;
@@ -555,12 +557,14 @@ aside.mobile-menu .mobile-menu-main ul li a {
   justify-content: space-between;
   gap: 10px;
 }
-aside.mobile-menu .mobile-menu-main ul li ul {
+aside.mobile-menu .mobile-menu-main ul .plusicon {
+  transition: 0.2s;
+}
+aside.mobile-menu .mobile-menu-main ul ul {
   display: none;
 }
-aside.mobile-menu .mobile-menu-main ul li:hover > a .plusicon {
+aside.mobile-menu .mobile-menu-main ul.submenu-active > a .plusicon {
   transform: rotate(-45deg);
-  transition: 0.2s;
 }
 .sticky-social {
   display: block;
